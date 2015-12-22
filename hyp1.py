@@ -3,24 +3,14 @@ import math, os
 a = input('a:')
 b = input('b:')
 
-def calc1(a,b,c,nc=False, logging=True):
-	if c:
-		return c
-
-	if logging: 
-		print "a is ", a
-		a = pow(a,2)
-	if logging:
-		print "b is ", b
-		a = pow(a,2)
-	c = a + b
-
+def find_hypotenuse(a,b):
+	return math.sqrt(pow(a,2)+pow(b,2))
 	
-	c2 = math.sqrt(c)
+def print_hypotenuse(a,b):
+		c = find_hypotenuse(a,b)
+		print "a is", a
+		print "b is", b
+		print "The hypotenuse is", c
 
-	if nc:
-		c = 2 * c * math.pi
-		return c
-	return c2
-
-print "The hypotenuse is ", calc1(a,b,None)
+find_hypotenuse(a,b)
+print_hypotenuse(a,b)
