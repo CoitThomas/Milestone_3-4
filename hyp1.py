@@ -1,8 +1,13 @@
-from math import sqrt, pow
+"""This module prompts a user to enter the lengths of two sides of a
+right triangle. Those values are then operated on in order to find the
+length of the hypotenuse. A print out of all three sides is then given.
+"""
+
+import math
 
 def assert_and_convert(user_input):
     """assert_and_convert(unknown) -> float
-    
+
     Assert that the input given by the user is appropriate. Convert
     that input into a float. Return the input.
     """
@@ -16,33 +21,33 @@ def assert_and_convert(user_input):
 def get_input():
     """get_input() -> (float, float)
 
-    Instruct and gather user input of two sides of a right 
+    Instruct and gather user input of two sides of a right
     triangle.
     """
     print "Enter the two sides of your right triangle."
-    a = input('a:')
-    a = assert_and_convert(a)
-    b = input('b:')
-    b = assert_and_convert(b)
-    return (a, b)
+    input_a = input('a:')
+    side_a = assert_and_convert(input_a)
+    input_b = input('b:')
+    side_b = assert_and_convert(input_b)
+    return (side_a, side_b)
 
-def find_hypotenuse(a, b):
+def find_hypotenuse(side_a, side_b):
     """find_hypotenuse(float, float) -> float
 
     Calculate and return the hypotenuse of a right triangle.
     """
-    return math.sqrt(pow(a, 2) + pow(b, 2))
+    return math.sqrt(math.pow(side_a, 2) + math.pow(side_b, 2))
 
-def print_hypotenuse(a, b, c):
+def print_hypotenuse(side_a, side_b, hypotenuse):
     """print_hypotenuse(float, float, float) -> none
 
     Print out the values of sides 'a' and 'b' of the triangle and
     its corresponding hypotenuse.
     """
-    print "a is", a
-    print "b is", b
-    print "The hypotenuse is", c
+    print "a is", side_a
+    print "b is", side_b
+    print "The hypotenuse is", hypotenuse
 
-(a, b) = get_input()
-c = find_hypotenuse(a, b)
-print_hypotenuse(a, b, c)
+(SIDE_A, SIDE_B) = get_input()
+HYPOTENUSE = find_hypotenuse(SIDE_A, SIDE_B)
+print_hypotenuse(SIDE_A, SIDE_B, HYPOTENUSE)
