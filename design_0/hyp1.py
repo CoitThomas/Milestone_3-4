@@ -1,6 +1,5 @@
-"""This module prompts a user to enter the lengths of two sides of a
-right triangle. Those values are then operated on in order to find the
-length of the hypotenuse. A print out of all three sides is then given.
+"""This module contains all the functions needed to successfully run
+find_hypotenuse.py
 """
 
 import math
@@ -47,7 +46,3 @@ def print_hypotenuse(side_a, side_b, hypotenuse):
     print "a is", side_a
     print "b is", side_b
     print "The hypotenuse is", hypotenuse
-
-(SIDE_A, SIDE_B) = get_input()
-HYPOTENUSE = find_hypotenuse(SIDE_A, SIDE_B)
-print_hypotenuse(SIDE_A, SIDE_B, HYPOTENUSE)
