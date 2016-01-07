@@ -7,4 +7,7 @@ import hyp1
 
 (SIDE_A, SIDE_B) = hyp1.get_input()
 HYPOTENUSE = hyp1.find_hypotenuse(SIDE_A, SIDE_B)
-hyp1.print_hypotenuse(SIDE_A, SIDE_B, HYPOTENUSE)
+print """
+a is %.2f
+b is %.2f
+The hypotenuse is %.2f""" % (SIDE_A, SIDE_B, HYPOTENUSE)
