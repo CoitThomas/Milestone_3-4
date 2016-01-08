@@ -1,4 +1,4 @@
-"""Unit test which varifies the correct calculation of the hypotenuse
+"""Unit test which verifies the correct calculation of the hypotenuse
 of the right triangle.
 """
 
